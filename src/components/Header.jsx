@@ -79,10 +79,10 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-export default function Example() {
+export default function Header() {
   return (
     <Popover className="relative bg-white">
-      <div className="mx-auto px-4 sm:px-6">
+      <div className="px-8">
         <div className="flex justify-between items-center border-b-2 border-gray-100 py-6 md:justify-start md:space-x-10">
           <div className="flex justify-start lg:w-0 lg:flex-1">
             <a href="/">

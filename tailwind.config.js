@@ -3,7 +3,14 @@ module.exports = {
 "./src/**/*.{js,jsx,ts,tsx}",
 ],
   theme: {
-    extend: {},
+    borderRadius: {
+    'large': '140px'
+    },
+    extend: {
+      
+    },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/typography')
+  ],
 }
