@@ -23,7 +23,7 @@ const HeroSection = () => {
         
     }, [])
     return (
-        <div className="overflow-hidden h-screen">
+        <div className="overflow-hidden h-full">
         <SlickSlider {...settings}>
             <SliderItem></SliderItem>
             <SliderItem></SliderItem>

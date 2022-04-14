@@ -2,6 +2,7 @@
 import Header from './components/Header'
 import { Routes, Route } from 'react-router-dom'
 import HomePage from './views/HomePage';
+import Footer from './views/sections/Footer';
 // import './App.css';
 
 function App() {
@@ -15,6 +16,9 @@ function App() {
         <Route path="/" element={<HomePage />} />
         {/* <Route path="about" element={<About />} /> */}
       </Routes>
+      </div>
+      <div className=''>
+        <Footer></Footer>
       </div>
     </div>
   );

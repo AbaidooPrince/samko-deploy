@@ -14,7 +14,7 @@ const AboutSection = () => {
       <div className="">
         {/* row for about section  */}
         <div className="grid md:grid-cols-2 gap-4">
-          <div className="">
+          <div className="p-10">
             <TinyTitle text={'About us'}></TinyTitle>
             <div>
               <SectionTitle text={'Quality Airconditioning Services for you'}></SectionTitle>

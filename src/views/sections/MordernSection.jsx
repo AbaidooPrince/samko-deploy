@@ -24,7 +24,7 @@ const ModernSection = () => {
               />
             </div>
           </div>
-          <div className="">
+          <div className="p-10">
             <TinyTitle text={'About us'}></TinyTitle>
             <div>
               <SectionTitle text={'Quality Airconditioning Services for you'}></SectionTitle>
