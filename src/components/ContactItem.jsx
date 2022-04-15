@@ -13,7 +13,7 @@ const ContactItem = (props) => {
                     { props.props }:
                 </div>
                 <div>
-                    + 233 (0) 20 908 9090
+                    + 233 (0) 20 908 9091
                 </div>
             </div>
             </div>
