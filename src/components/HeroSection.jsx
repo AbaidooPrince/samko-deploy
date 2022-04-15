@@ -4,6 +4,7 @@ import "../../node_modules/slick-carousel/slick/slick.css";
 import "../../node_modules/slick-carousel/slick/slick-theme.css";
 import SlickSlider from "react-slick";
 import SliderItem from './SliderItem'
+import AboutSection from '../views/sections/AboutSection'
 // import axios from "axios";
 
 const HeroSection = () => {
@@ -14,8 +15,13 @@ const HeroSection = () => {
     const settings = {
       dots: true,
       autoPlay: true,
+      initialSlide: 0,
       slidesToShow: 1,
+      infinite: true,
+      slide: 'div',
       slidesToScroll: 1,
+      speed: 1000,
+      easing: 'linear',
       autoplaySpeed: 2000
     }
 
@@ -23,10 +29,10 @@ const HeroSection = () => {
         
     }, [])
     return (
-        <div className="overflow-hidden h-full">
+        <div className="container h-screen">
         <SlickSlider {...settings}>
             <SliderItem></SliderItem>
-            <SliderItem></SliderItem>
+            <AboutSection></AboutSection>
             <SliderItem></SliderItem>
         </SlickSlider>
         </div>

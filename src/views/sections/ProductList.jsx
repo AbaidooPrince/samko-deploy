@@ -10,7 +10,7 @@ const ProductList = () => {
         <TinyTitle></TinyTitle>
         <SectionTitle></SectionTitle>
             </div>
-            <div className='grid xl:grid-cols-6 md:grid-cols-5 gap-4 xl:gap-8 place-content-center mt-12'>
+            <div className='grid xl:grid-cols-4 md:grid-cols-4 gap-4 xl:gap-8 place-content-center mt-12'>
                 { items.length &&
                     items.map(item => 
                         <ProductItem></ProductItem>

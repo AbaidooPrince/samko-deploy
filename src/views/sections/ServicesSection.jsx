@@ -35,8 +35,8 @@ const ServicesSection = () => {
       <div className="mt-10">
         <SlickSlider {...settings}>
         <ServicesCard></ServicesCard>
-        {/* <ServicesCard></ServicesCard>
-        <ServicesCard></ServicesCard> */}
+        <ServicesCard></ServicesCard>
+        <ServicesCard></ServicesCard>
         </SlickSlider>
       </div>
           

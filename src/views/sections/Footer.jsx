@@ -18,14 +18,13 @@ const Footer = () => {
                     <p className='prose'>You dont worry about results because all of these interior</p>
                 </div>
             </div>
-            <div className=' grid sm:grid-cols-1 md:grid-cols-4 place-content-center pb-12'>
+            <div className='grid sm:grid-cols-1 md:grid-cols-4 place-content-center pb-12'>
                { contact.length && contact.map(con =>  <div>
                     <ContactItem
                     props={con}
                     ></ContactItem>
                 </div>
                )
-
                }
             </div>
             <div className='flex justify-center bg-slate-900'>
