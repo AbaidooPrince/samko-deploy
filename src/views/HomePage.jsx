@@ -11,6 +11,7 @@ const HomePage = () => {
         getAboutSection()
         getModernSection()
         getProductsSection()
+        getStores()
     })
     return (
         <div className="overflow-x-hidden">
