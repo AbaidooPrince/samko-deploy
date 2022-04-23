@@ -26,7 +26,7 @@ const ModernSection = () => {
             <div className="">
               <img
                 height={60}
-                className="w-full md:rounded-bl-large rounded-tl-large h-96 object-cover"
+                className="w-full rounded-tr-large h-96 object-cover"
                 alt="imag"
                 src={data.attributes.featuredImage ? data.attributes.featuredImage.data.attributes.url : image}
               />

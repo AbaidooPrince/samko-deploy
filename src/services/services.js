@@ -24,6 +24,18 @@ const getModernSection = async () => {
 
     }
 }
+const getSliders = async () => {
+    try {
+        const response = await api().get('/sliders?populate=*')
+        if (response.status === 200) {
+            console.log(response.data.data)
+            sessionStorage.setItem('sliders', JSON.stringify(response.data.data))
+            return response.data.data
+        }
+    } catch (e) {
+
+    }
+}
 
 const getProductsSection = async () => {
     try {
@@ -54,5 +66,6 @@ export {
     getAboutSection,
     getModernSection,
     getProductsSection,
-    getStores
+    getStores,
+    getSliders
 }

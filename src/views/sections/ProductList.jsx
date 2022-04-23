@@ -3,23 +3,25 @@ import SectionTitle from '../../components/custom/SectionTitle'
 import TinyTitle from '../../components/custom/TinyTitle'
 import ProductItem from '../../components/ProductItem'
 import { getProductsSection } from '../../services/services'
+// import { getProductsSection } from '../../services/services'
 const ProductList = () => {
-    const items = ['sdks', 'sdsf', 'wqw']
+   
     const [data, setData] = useState({})
-    const [stores, setStores] = useState([])
-  
+    const [stores, setStores] = useState({})
+  console.log(data)
     const getData = () => {
+      getProductsSection()
       const response = sessionStorage.getItem('products')
       setData(JSON.parse(response))
     //   setStores(response.attributes.products.data)
     }
-    // const getStores = () => {
-    //     const response = sessionStorage.getItem('stores')
-    //     setStores(JSON.parse(response))
-    //   }
+    const getStores = () => {
+        const response = sessionStorage.getItem('stores')
+        setStores(JSON.parse(response))
+      }
     useEffect(() => {
-        getProductsSection()
-      getData()
+        getData()
+        getStores()
     }, [])
     return (
         <div className='container mx-auto'>
@@ -29,9 +31,16 @@ const ProductList = () => {
             </div>}
 
         <div className='grid xl:grid-cols-4 md:grid-cols-4 gap-4 xl:gap-8 place-content-center mt-12'>
-                { 
-                    items.map(item => 
-                        <ProductItem data={item} key={item.id}></ProductItem>
+                { data.attributes &&
+                    stores.map(item => 
+                        <ProductItem data={item} 
+                        item={item.attributes.item}
+                        description={item.attributes.description}
+                        price={item.attributes.price}
+                        image={item.attributes.image.data.attributes.url}
+                        key={item.id}>
+
+                        </ProductItem>
                     )
                 }
 

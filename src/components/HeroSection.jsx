@@ -1,10 +1,11 @@
 
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "../../node_modules/slick-carousel/slick/slick.css"; 
 import "../../node_modules/slick-carousel/slick/slick-theme.css";
 import SlickSlider from "react-slick";
 import SliderItem from './SliderItem'
 import AboutSection from '../views/sections/AboutSection'
+import { getSliders } from "../services/services";
 // import axios from "axios";
 
 const HeroSection = () => {
@@ -23,17 +24,30 @@ const HeroSection = () => {
       speed: 1000,
       easing: 'linear',
       autoplaySpeed: 2000
+    }  
+    const [data, setData] = useState([])
+  
+    const getData = () => {
+      getSliders()
+      const response = sessionStorage.getItem('sliders')
+      setData(JSON.parse(response))
+    //   setStores(response.attributes.products.data)
     }
-
-    useEffect ( () => {
-        
+    // const getStores = () => {
+    //     const response = sessionStorage.getItem('stores')
+    //     setStores(JSON.parse(response))
+    //   }
+    useEffect(() => {
+        getData()
     }, [])
     return (
         <div className="">
         <SlickSlider {...settings}>
-            <SliderItem></SliderItem>
-            <AboutSection></AboutSection>
-            <SliderItem></SliderItem>
+            {data && data.map(item =><SliderItem title={item.attributes.title}
+            subtitle={item.attributes.subtitle}
+            image={item.attributes.image.data.attributes.url}
+            key={item.id}></SliderItem>)
+            }
         </SlickSlider>
         </div>
     )

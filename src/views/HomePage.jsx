@@ -10,6 +10,7 @@ const HomePage = () => {
     useEffect(() => {
         getAboutSection()
         getModernSection()
+        getProductsSection()
     })
     return (
         <div className="overflow-x-hidden">
@@ -25,7 +26,7 @@ const HomePage = () => {
             <div className="md:p-16 p-4">
                 <ModernSection></ModernSection>
             </div>
-            <div className="md:p-16 p-4">
+            <div className="md:p-16 p-4 bg-slate-50">
                 <ProductList></ProductList>
             </div>
         </div>
