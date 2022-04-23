@@ -4,7 +4,7 @@ import { Routes, Route } from 'react-router-dom'
 import HomePage from './views/HomePage';
 import Footer from './views/sections/Footer';
 // import './App.css';
-
+console.log('api', process.env.REACT_APP_BASE_API_URL)
 function App() {
   return (
     <div className="">

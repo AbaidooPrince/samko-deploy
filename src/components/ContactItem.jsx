@@ -9,10 +9,10 @@ const ContactItem = (props) => {
             <UserCircleIcon className="h-10 md:h-16"></UserCircleIcon>
             </div>
             <div className='prose'>
-                <div className='font-bold md:mb-4  text-lg'>
+                <div className='font-medium md:mb-4 text-white text-lg'>
                     { props.props }:
                 </div>
-                <div>
+                <div className='text-white'>
                     + 233 (0) 20 908 9090
                 </div>
             </div>

@@ -1,11 +1,13 @@
 import React from "react";
 import { Button } from "./custom/Button";
 
-const ProductItem = (props) => {
+const ProductItem = (data) => {
+    console.log('props', data)
     const image = "https://images.unsplash.com/photo-1649185885081-91f76cb326bb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80";
     
     return (
         <>
+        {
         <div className="card roundedLG outline outline-1 outline-gray-400">
             {/* image  */}
             <div className="p-0 w-full">
@@ -13,7 +15,7 @@ const ProductItem = (props) => {
             </div>
             <div className="text-center p-4">
                 <div className="text-md font-semibold">
-                    Air Condition
+                    {'`${data.attributes.item ? data.attributes.item : Item }`'}
                 </div>
                 <div className="h-12 text-gray-600">
                 <small>One of the key thing that is supper important to our client is the mobile</small>
@@ -25,7 +27,7 @@ const ProductItem = (props) => {
                     <Button></Button>
                 </div>
             </div>
-        </div>
+        </div>}
         </>
     )
 }

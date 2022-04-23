@@ -6,6 +6,7 @@ import "../../../node_modules/slick-carousel/slick/slick-theme.css";
 import SlickSlider from "react-slick";
 import SectionTitle from "../../components/custom/SectionTitle";
 import { ServicesCard } from "../../components/homepage/ServicesCard";
+import TinyTitle from "../../components/custom/TinyTitle";
 
 //
 const ServicesSection = () => {
@@ -22,9 +23,7 @@ const ServicesSection = () => {
   return (
     <section className="container mx-auto">
       <div className="text-center">
-        <div className="uppercase font-light mb-2">
-              <small>About Company</small>
-        </div>
+       <TinyTitle></TinyTitle>
             <div className="rounded-lg ">
               <SectionTitle></SectionTitle>
             </div>

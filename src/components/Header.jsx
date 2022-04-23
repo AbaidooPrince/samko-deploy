@@ -19,26 +19,26 @@ import { ChevronDownIcon } from '@heroicons/react/solid'
 
 const solutions = [
   {
-    name: 'Analytics',
+    name: 'Home',
     description: 'Get a better understanding of where your traffic is coming from.',
     href: '#',
     icon: ChartBarIcon,
   },
   {
-    name: 'Engagement',
+    name: 'Services',
     description: 'Speak directly to your customers in a more meaningful way.',
     href: '#',
     icon: CursorClickIcon,
   },
-  { name: 'Security', description: "Your customers' data will be safe and secure.", href: '#', icon: ShieldCheckIcon },
+  { name: 'Products', description: "Your customers' data will be safe and secure.", href: '#', icon: ShieldCheckIcon },
   {
-    name: 'Integrations',
+    name: 'About Us',
     description: "Connect with third-party tools that you're already using.",
     href: '#',
     icon: ViewGridIcon,
   },
   {
-    name: 'Automations',
+    name: 'Contact',
     description: 'Build strategic funnels that will drive your customers to convert',
     href: '#',
     icon: RefreshIcon,
@@ -84,15 +84,27 @@ export default function Header() {
     <Popover className="relative bg-white">
       <div className="px-8">
         <div className="flex justify-between items-center border-b-2 border-gray-100 py-6 md:justify-start md:space-x-10">
-          <div className="flex justify-start lg:w-0 lg:flex-1">
+          <div className="flex justify-start lg:w-8 lg:flex-1">
             <a href="/">
               <span className="sr-only">Workflow</span>
               <img
                 className="h-8 w-auto sm:h-10"
                 src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
-                alt=""
+                alt="Logo"
               />
             </a>
+            <div className='space-x-5 mx-auto sm:hidden'>
+            <a href="#" className="text-base font-medium text-gray-500 hover:text-gray-900">
+              Pricing
+            </a>
+            <a href="#" className="text-base font-medium text-gray-500 hover:text-gray-900">
+              Docs
+            </a>
+
+            <a href="#" className="text-base font-medium text-gray-500 hover:text-gray-900">
+              Docs
+            </a>
+            </div>
           </div>
           <div className="-mr-2 -my-2 md:hidden">
             <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
@@ -100,8 +112,8 @@ export default function Header() {
               <MenuIcon className="h-6 w-6" aria-hidden="true" />
             </Popover.Button>
           </div>
-          <Popover.Group as="nav" className="hidden md:flex space-x-10">
-            <Popover className="relative">
+           <Popover.Group as="nav" className="hidden md:flex space-x-10">
+            {/* <Popover className="relative">
               {({ open }) => (
                 <>
                   <Popover.Button
@@ -164,16 +176,19 @@ export default function Header() {
                   </Transition>
                 </>
               )}
-            </Popover>
-
-            <a href="#" className="text-base font-medium text-gray-500 hover:text-gray-900">
+            </Popover> */}
+            
+            {/* <a href="#" className="text-base font-medium text-gray-500 hover:text-gray-900">
               Pricing
             </a>
             <a href="#" className="text-base font-medium text-gray-500 hover:text-gray-900">
               Docs
             </a>
 
-            <Popover className="relative">
+            <a href="#" className="text-base font-medium text-gray-500 hover:text-gray-900">
+              Docs
+            </a> */}
+            {/* <Popover className="relative">
               {({ open }) => (
                 <>
                   <Popover.Button
@@ -243,9 +258,9 @@ export default function Header() {
                   </Transition>
                 </>
               )}
-            </Popover>
+            </Popover> */}
           </Popover.Group>
-          <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
+          {/* <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
             <a href="#" className="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900">
               Sign in
             </a>
@@ -255,7 +270,7 @@ export default function Header() {
             >
               Sign up
             </a>
-          </div>
+          </div> */}
         </div>
       </div>
 
@@ -301,7 +316,7 @@ export default function Header() {
                 </nav>
               </div>
             </div>
-            <div className="py-6 px-5 space-y-6">
+            {/* <div className="py-6 px-5 space-y-6">
               <div className="grid grid-cols-2 gap-y-4 gap-x-8">
                 <a href="#" className="text-base font-medium text-gray-900 hover:text-gray-700">
                   Pricing
@@ -334,7 +349,7 @@ export default function Header() {
                   </a>
                 </p>
               </div>
-            </div>
+            </div> */}
           </div>
         </Popover.Panel>
       </Transition>

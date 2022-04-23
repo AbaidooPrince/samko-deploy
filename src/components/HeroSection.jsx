@@ -29,7 +29,7 @@ const HeroSection = () => {
         
     }, [])
     return (
-        <div className="container h-screen">
+        <div className="">
         <SlickSlider {...settings}>
             <SliderItem></SliderItem>
             <AboutSection></AboutSection>
